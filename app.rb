@@ -37,10 +37,11 @@ post '/push/:device_token/:id' do
   notification = Apnotic::Notification.new(params[:device_token])
 
   notification.topic = ENV['TOPIC']
-  notification.alert = Base64.urlsafe_encode64(request.body.read)
+  notification.alert = { 'loc-key' => 'apns-default-message' }
   notification.mutable_content = true
   notification.custom_payload = {
     i: params[:id],
+    m: Base64.urlsafe_encode64(request.body.read),
     s: request.env['HTTP_ENCRYPTION'].split('salt=').last,
     k: request.env['HTTP_CRYPTO_KEY'].split('dh=').last.split(';').first
   }
