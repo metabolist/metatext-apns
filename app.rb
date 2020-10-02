@@ -6,8 +6,6 @@ require 'sinatra'
 
 require 'dotenv/load' if ENV['RACK_ENV'] == 'development'
 
-Warning[:deprecated] = false # remove when http-2 gem is updated
-
 CONNECTION_OPTIONS = {
   auth_method: :token,
   cert_path: StringIO.new(ENV['APNS_AUTH_KEY']),
