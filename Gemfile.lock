@@ -6,13 +6,13 @@ GEM
       net-http2 (>= 0.18.3, < 2)
     connection_pool (2.2.3)
     dotenv (2.7.6)
-    http-2 (0.10.2)
+    http-2 (0.11.0)
     mustermann (1.1.1)
       ruby2_keywords (~> 0.0.1)
-    net-http2 (0.18.3)
-      http-2 (~> 0.10.1)
+    net-http2 (0.18.4)
+      http-2 (~> 0.11)
     nio4r (2.5.4)
-    puma (5.0.2)
+    puma (5.1.1)
       nio4r (~> 2.0)
     rack (2.2.3)
     rack-protection (2.1.0)
@@ -31,11 +31,11 @@ PLATFORMS
 DEPENDENCIES
   apnotic (~> 1.6.1)
   dotenv (~> 2.7.6)
-  puma (~> 5.0.2)
+  puma (~> 5.1.1)
   sinatra (~> 2.1.0)
 
 RUBY VERSION
-   ruby 2.7.2p137
+   ruby 3.0.0p0
 
 BUNDLED WITH
-   2.1.4
+   2.2.3
