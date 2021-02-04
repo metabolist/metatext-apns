@@ -12,12 +12,12 @@ GEM
     net-http2 (0.18.4)
       http-2 (~> 0.11)
     nio4r (2.5.4)
-    puma (5.1.1)
+    puma (5.2.0)
       nio4r (~> 2.0)
     rack (2.2.3)
     rack-protection (2.1.0)
       rack
-    ruby2_keywords (0.0.2)
+    ruby2_keywords (0.0.4)
     sinatra (2.1.0)
       mustermann (~> 1.0)
       rack (~> 2.2)
@@ -31,7 +31,7 @@ PLATFORMS
 DEPENDENCIES
   apnotic (~> 1.6.1)
   dotenv (~> 2.7.6)
-  puma (~> 5.1.1)
+  puma (~> 5.2.0)
   sinatra (~> 2.1.0)
 
 RUBY VERSION
