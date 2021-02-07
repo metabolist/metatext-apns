@@ -24,6 +24,15 @@ Finally, you will need to specify the size of the connection pool:
 
 The service sets `{ "loc-key" : "apns-default-message" }` for the `alert` key of the `aps` payload dictionary. If decrypting the notification on the client fails, the value for `"apns-default-message"` in your `Localizable.strings` file is what will be displayed.
 
+## Usage
+
+Register your push subscription to call the endpoint `/push/:device_token/:id` on the domain you are hosting the service, where `device_token` is the device token received in `application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data)` in the client as a Base16 string and `id` is an identifier for which account on the client the notification belongs to. The service will deliver notifications with the `mutable-content` key set to `1` so a notification service extension can decrypt them. The notifications will have these keys in their custom payload:
+
+* `i`: The `id` path component of the subscription URL
+* `m`: The encrypted message
+* `s`: The salt
+* `k`: The server's public key
+
 ## Deployment
 
 `metatext-apns` is a [Sinatra](http://sinatrarb.com) application, and can be deployed like any other [Rack](https://github.com/rack/rack)-based application. It is set up to be run using the [Puma](https://puma.io) web server.
