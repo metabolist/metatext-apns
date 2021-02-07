@@ -26,7 +26,7 @@ The service sets `{ "loc-key" : "apns-default-message" }` for the `alert` key of
 
 ## Usage
 
-Register your push subscription to call the endpoint `/push/:device_token/:id` on the domain you are hosting the service, where `device_token` is the device token received in `application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data)` in the client as a Base16 string and `id` is an identifier for which account on the client the notification belongs to. The service will deliver notifications with the `mutable-content` key set to `1` so a notification service extension can decrypt them. The notifications will have these keys in their custom payload:
+Register your push subscription to call the endpoint `/push/:device_token/:id` (adding `?sandbox=true` for debug builds) on the domain you are hosting the service, where `device_token` is the device token received in `application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data)` in the client as a Base16 string and `id` is an identifier for which account on the client the notification belongs to. The service will deliver notifications with the `mutable-content` key set to `1` so a notification service extension can decrypt them. The notifications will have these keys in their custom payload:
 
 * `i`: The `id` path component of the subscription URL
 * `m`: The encrypted message as a URL-safe Base64 string
