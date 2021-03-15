@@ -33,6 +33,8 @@ Register your push subscription to call the endpoint `/push/:device_token/:id` (
 * `s`: The salt as a URL-safe Base64 string
 * `k`: The server's public key as a URL-safe Base64 string
 
+See Metatext's [notification service extension](https://github.com/metabolist/metatext/blob/main/Notification%20Service%20Extension/NotificationService.swift) and [push notification parsing service](https://github.com/metabolist/metatext/blob/main/ServiceLayer/Sources/ServiceLayer/Services/PushNotificationParsingService.swift) for an example of how to decrypt the notifications in a notification service extension.
+
 ## Deployment
 
 `metatext-apns` is a [Sinatra](http://sinatrarb.com) application, and can be deployed like any other [Rack](https://github.com/rack/rack)-based application. It is set up to be run using the [Puma](https://puma.io) web server.
