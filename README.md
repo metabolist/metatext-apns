@@ -1,6 +1,6 @@
 # metatext-apns
 
-This is a simple service to relay [WebPush](https://tools.ietf.org/html/rfc8030) notifications to Apple's push notification service. It was designed for Metatext, an iOS Mastodon client, but could theoretically be used for other purposes.
+This is a simple service to relay [WebPush](https://tools.ietf.org/html/rfc8030) notifications to Apple's push notification service. It was designed for [Metatext](https://github.com/metabolist/metatext), an iOS Mastodon client, but could theoretically be used for other purposes.
 
 ## Setup
 
