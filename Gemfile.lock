@@ -11,8 +11,8 @@ GEM
       ruby2_keywords (~> 0.0.1)
     net-http2 (0.18.4)
       http-2 (~> 0.11)
-    nio4r (2.5.4)
-    puma (5.2.0)
+    nio4r (2.5.7)
+    puma (5.2.2)
       nio4r (~> 2.0)
     rack (2.2.3)
     rack-protection (2.1.0)
@@ -35,7 +35,7 @@ DEPENDENCIES
   sinatra (~> 2.1.0)
 
 RUBY VERSION
-   ruby 3.0.0p0
+   ruby 3.0.1p64
 
 BUNDLED WITH
-   2.2.3
+   2.2.15
