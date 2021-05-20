@@ -4,7 +4,7 @@ GEM
     apnotic (1.6.1)
       connection_pool (~> 2)
       net-http2 (>= 0.18.3, < 2)
-    connection_pool (2.2.3)
+    connection_pool (2.2.5)
     dotenv (2.7.6)
     http-2 (0.11.0)
     mustermann (1.1.1)
@@ -12,7 +12,7 @@ GEM
     net-http2 (0.18.4)
       http-2 (~> 0.11)
     nio4r (2.5.7)
-    puma (5.2.2)
+    puma (5.3.1)
       nio4r (~> 2.0)
     rack (2.2.3)
     rack-protection (2.1.0)
@@ -31,7 +31,7 @@ PLATFORMS
 DEPENDENCIES
   apnotic (~> 1.6.1)
   dotenv (~> 2.7.6)
-  puma (~> 5.2.0)
+  puma (~> 5.3.1)
   sinatra (~> 2.1.0)
 
 RUBY VERSION
